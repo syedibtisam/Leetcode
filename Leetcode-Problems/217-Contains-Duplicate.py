@@ -9,3 +9,9 @@ class Solution:
                 return True
             unique_values.add(value)
         return False
+    
+        # Solution two
+        # if len(set(nums)) == len(nums):
+        #     return False
+        # else:
+        #     return True
