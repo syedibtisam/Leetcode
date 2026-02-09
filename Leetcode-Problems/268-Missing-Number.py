@@ -10,3 +10,5 @@ class Solution:
             unique_values.remove(value)
         
         return unique_values.pop()
+        # Solution two
+        # return sum(range(len(nums) + 1)) - sum(nums)
