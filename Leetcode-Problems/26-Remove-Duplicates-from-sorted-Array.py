@@ -1,12 +1,11 @@
 from typing import List
-def removeDuplicates(nums: List[int]) -> int:
-    index = 0
-    unique_values = set()
 
-    for value in nums:
-        if value not in unique_values:
-            nums[index] = value
-            index += 1
-        unique_values.add(value)
-    
-    return index
+def removeDuplicates(nums: List[int]) -> int:
+    left:int = 0
+
+    for right in range(len(nums)):
+        if nums[left] != nums[right]:
+            left += 1
+            nums[left] = nums[right]
+        
+    return left + 1
